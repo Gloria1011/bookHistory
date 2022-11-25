@@ -1,16 +1,20 @@
-<p>
+
+<div class="table-actions">
   <mat-toolbar style="background-color:transparent">
     <button mat-raised-button (click)="openNew()" color="primary">{{newEditCaption}}</button>
     <button mat-raised-button (click)="deleteSelectedBooks()" color="accent">Delete</button>
   </mat-toolbar>
-</p>
+
 
 <mat-form-field appearance="standard">
   <mat-label>Filter</mat-label>
   <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input />
 </mat-form-field>
+
+</div>
+
 <ng-container *ngIf="booksAsMatTableDataSource$ | async as books">
-<div class="mat-elevation-z8">
+<div class="example-container mat-elevation-z8 ">
   <table mat-table [dataSource]="books" matSort>
 
     <ng-container matColumnDef="select">
@@ -29,42 +33,42 @@
     </ng-container>
   
     <ng-container matColumnDef="key">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>ID</th>
-      <td mat-cell *matCellDef="let row">{{row.key}}</td>
+      <mat-header-cell *matHeaderCellDef mat-sort-header><i class="fa fa-id-card-clip"></i>ID</mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="key">{{row.key}}</mat-cell >
     </ng-container>
 
     <ng-container matColumnDef="isbn">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>ISBN</th>
-      <td mat-cell *matCellDef="let row">{{row.isbn}}</td>
+      <mat-header-cell *matHeaderCellDef mat-sort-header><i class="fa fa-book"></i>ISBN</mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="isbn">{{row.isbn}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="title">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Title</th>
-      <td mat-cell *matCellDef="let row">{{row.title}}</td>
+      <mat-header-cell *matHeaderCellDef mat-sort-header><i class="fa fa-heading"></i>Title</mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="title">{{row.title}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="genre">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Genre</th>
-      <td mat-cell *matCellDef="let row">{{row.genre}}</td>
+      <mat-header-cell *matHeaderCellDef mat-sort-header><i class="fa fa-book-atlas"></i>Genre</mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="genre">{{row.genre}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="description">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Description</th>
-      <td mat-cell *matCellDef="let row">{{row.description}}</td>
+      <mat-header-cell *matHeaderCellDef mat-sort-header><i class="fa fa-file-lines"></i>Description</mat-header-cell>
+      <mat-cell *matCellDef="let row"  data-label="description">{{row.description}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="publishedDate">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>publishedDate</th>
-      <td mat-cell *matCellDef="let row">{{row.publishedDate}}</td>
+      <mat-header-cell *matHeaderCellDef mat-sort-header><i class="fa-solid fa-calendar-days"></i>Published Date</mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="publishedDate">{{row.publishedDate}}</mat-cell>
     </ng-container>
 
     <ng-container matColumnDef="authors">
-      <th mat-header-cell *matHeaderCellDef mat-sort-header>Authors</th>
-      <td mat-cell *matCellDef="let row">{{row.authors}}</td>
+      <mat-header-cell *matHeaderCellDef mat-sort-header><i class="fa fa-feather-pointed"></i>Authors</mat-header-cell>
+      <mat-cell *matCellDef="let row" data-label="authors">{{row.authors}}</mat-cell>
     </ng-container>
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
 
     <tr class="mat-row" *matNoDataRow>
       <td class="mat-cell" colspan="4">

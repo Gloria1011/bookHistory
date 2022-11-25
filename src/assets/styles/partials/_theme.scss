@@ -1,18 +1,231 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 @use '@angular/material' as mat;
-// @use 'variables';
-// @use 'scaffolding';
-// @use 'palette';
+@use 'variables';
+@use 'scaffolding';
+@use 'palette';
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
 
-$my-primary: mat.define-palette(mat.$indigo-palette);;
+// Typography config based on the default, but using "Poppins" as the
+// default font family for all levels.
+$kids-typography: mat.define-typography-config($font-family: 'Poppins',
+  );
+
+$my-primary: mat.define-palette(mat.$indigo-palette);
 $my-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
 $my-warn: mat.define-palette(mat.$red-palette);
-
-$my-theme: mat.define-light-theme((
-      color: (
-        primary: $my-primary,
+$my-theme: mat.define-light-theme((color: (primary: $my-primary,
         accent: $my-accent,
         warn: $my-warn,
-      )
-    ));
+      ), typography: $kids-typography, ));
+
+
+table {
+  width: 100%;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.mat-table .mat-row:nth-child(even) {
+  background: #f6f5f6
+}
+
+.mat-table .mat-row:nth-child(odd) {
+  background: #FFF
+}
+
+@media screen and (max-width: 960px) {
+
+
+  .mat-column-genre {
+    flex: 0 0 auto !important;
+  }
+
+  .mat-column-id {
+    flex: 0 0 auto !important;
+  }
+
+  .mat-column-title {
+    flex: 0 0 auto !important;
+  }
+
+  .mat-column-description {
+    flex: 0 0 auto !important;
+  }
+
+
+  .mat-column-change {
+    flex: 0 0 auto !important;
+  }
+
+
+  .mat-column-bookId {
+    flex: 0 0 auto !important;
+  }
+
+  .mat-column-isbn {
+    flex: 0 0 auto !important;
+  }
+
+
+  .mat-column-timeOfChange {
+    flex: 0 0 auto !important;
+  }
+
+
+  .mat-column-key {
+    flex: 0 0 auto !important;
+  }
+
+
+  .mat-column-publishedDate {
+    flex: 0 0 auto !important;
+  }
+
+  .mat-column-authors {
+    flex: 0 0 auto !important;
+  }
+
+
+  .mat-sort-header-content {
+    text-align: center;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding-top: 10px;
+  }
+
+  .mat-sort-header-container {
+    display: flex;
+    flex-direction: column;
+  }
+
+
+
+  .mat-header-row {
+
+    display: flex;
+    justify-content: space-between;
+  }
+
+
+
+
+
+
+
+  .mat-table {
+    border: 0;
+    vertical-align: middle
+  }
+
+  .mat-table caption {
+    font-size: 1em;
+  }
+
+  .mat-table .mat-row {
+    border-bottom: 5px solid variables.$zebra-color;
+    display: block;
+  }
+
+  .mat-table .mat-cell {
+    border-bottom: 1px solid variables.$zebra-color;
+    display: block;
+    font-size: 1em;
+    text-align: right;
+    margin-bottom: 4%;
+    padding-right: 4%;
+    padding-left: 4%;
+  }
+
+  .mat-table .mat-cell:before {
+    content: attr(data-label);
+    background-color: variables.$mobile-column-vertical;
+    color: variables.$white-color;
+    padding: 1%;
+    float: left;
+    text-transform: uppercase;
+    font-weight: normal;
+    font-size: .85em;
+  }
+
+  tr.mat-row {
+    height: auto !important;
+  }
+
+  .mat-table .mat-cell:last-child {
+    border-bottom: 0;
+  }
+
+  .mat-table .mat-cell:first-child {
+    padding-top: 4%;
+  }
+
+}
+
+.mat-dialog-content {
+  overflow: hidden !important;
+}
+
+
+.mat-menu-content:not(:empty) {
+  padding: 0 !important;
+}
+
+
+.mat-sort-header-content {
+  color: variables.$white-color;
+}
+
+
+.mat-header-row {
+  background: variables.$ocean-blue;
+  color: variables.$white-color;
+}
+
+
+mat-header-cell {
+  i {
+    padding-right: 7px;
+  }
+
+  font-size: 15px;
+}
+
+
+.mat-sort-header-arrow {
+  color: variables.$white-color;
+}
+
+.mat-header-cell {
+  padding: 0px !important;
+}
+
+.mat-h2,
+.mat-title,
+.mat-typography .mat-h2,
+.mat-typography .mat-title,
+.mat-typography h2 {
+  margin: 2% !important;
+}
+
+
+.mat-header-row {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+
+th.mat-header-cell,
+td.mat-cell,
+td.mat-footer-cell {
+  border: none !important;
+}
+
+.mat-form-field-infix {
+  background: white;
+  border: 1px solid;
+}

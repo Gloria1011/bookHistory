@@ -1,35 +1,22 @@
-:host ::ng-deep {
-    table {
-      width: 100%;
-    }
-    
-    .mat-form-field {
-      font-size: 14px;
-      width: 100%;
-    }
-    
-    td, th {
-      width: 25%;
-    }  
-  
-    .mat-column-key {
-      width: 10% !important;
-    }
-  
-    .mat-column-isbn {
-      width: 10% !important;
-    }
-  
-    .mat-column-bookid {
-      width: 10% !important;
-    }
-    
-    .mat-column-timeOfChange {
-      width: 10% !important;
-    }
-  
-    .mat-column-change {
-      width: 60% !important;
-    }
-  
-  }
+.desktop {
+    display: none;
+}
+
+.navigation {
+    background-color: #042483;
+    display: flex;
+    align-items: center;
+}
+
+.mobile {
+    display: flex;
+}
+
+.mat-column-change {
+    flex: 0 0 40%;
+}
+
+
+.mat-column-bookId {
+    flex: 0 0 17%;
+}

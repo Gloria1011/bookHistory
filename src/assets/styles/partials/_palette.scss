@@ -1,16 +1,23 @@
-// custom material palettes
-
 $my-palette: (
- 50: #e8eaf6,
- 100: #c5cae9,
- 200: #9fa8da,
- 300: #7986cb,
- // ... continues to 900
- contrast: (
-   50: rgba(black, 0.87),
-   100: rgba(black, 0.87),
-   200: rgba(black, 0.87),
-   300: white,
-   // ... continues to 900
- )
+  50: #e8eaf6,
+  100: #c5cae9,
+  200: #9fa8da,
+  300: #7986cb,
+  400: #042483,
+  500: #3f51b5,
+  600: #1c2a7b,
+  700: #16236d,
+  800: #0c1754,
+  900: #1c2a7b,
+  contrast: (50: rgba(black, 0.87),
+    100: rgba(black, 0.77),
+    200: rgba(black, 0.67),
+    300: rgba(black, 0.57),
+    400: rgba(black, 0.47),
+    500: rgba(black, 0.57),
+    600: rgba(gray, 0.87),
+    700: rgba(gray, 0.77),
+    800: rgba(gray, 0.67),
+    900: rgba(gray, 0.57),
+  )
 );

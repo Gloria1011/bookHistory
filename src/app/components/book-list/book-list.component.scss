@@ -1,61 +1,71 @@
-:host ::ng-deep {
-  table {
-    width: 100%;
-  }
-  
-  .mat-form-field {
-    font-size: 14px;
-    width: 100%;
-  }
-  
-  td, th {
-    width: 25%;
-  }  
-
-  .mat-column-key {
-    width: 10% !important;
-  }
-
-  .mat-column-isbn {
-    width: 10% !important;
-  }
-
-  .mat-column-title {
-    width: 10% !important;
-  }
-  
-  .mat-column-genre {
-    width: 5% !important;
-  }
-
-  .mat-column-description {
-    width: 45% !important;
-  }
-  
-  .mat-column-publishedDate {
-    width: 10% !important;
-  }
-
-  .mat-column-authors {
-    width: 10% !important;
-  }
-
+.desktop {
+    display: none;
 }
 
-@media screen and (max-width: 960px) {
-  :host ::ng-deep {
-    table {
-      width: 100%;
+.navigation {
+    background-color: #042483;
+    display: flex;
+    align-items: center;
+}
+
+.mobile {
+    display: flex;
+}
+
+
+.table-actions {
+    display: flex;
+
+    button {
+        margin-right: 2%;
     }
-    
-    .mat-form-field {
-      font-size: 14px;
-      width: 100%;
+}
+
+mat-toolbar {
+    display: flex;
+    padding: 0px 5px 0px 5px;
+
+    mat-header-row {
+        display: flex;
+        border-width: 0;
+        border-bottom-width: 1px;
+        border-style: solid;
+        align-items: center;
+        box-sizing: border-box;
+        background-color: #5258cc;
     }
-    
-    td, th {
-      width: 25%;
+
+    mat-header-cell {
+        i {
+            padding-right: 2px;
+        }
+
+        font-size: 15px;
+        font-weight: 400;
+
+        th.mat-header-cell,
+        td.mat-cell {
+            border-bottom-style: none;
+        }
     }
-    
-  }
+}
+
+.mat-toolbar.mat-primary {
+    background: #0C374D;
+    color: white;
+}
+
+
+.mat-column-description {
+    flex: 0 0 30%;
+}
+
+
+.mat-column-id {
+    flex: 0 0 22%;
+}
+
+
+.mat-column-genre {
+    flex: 0 0 7%;
 }

@@ -1,0 +1,36 @@
+.navigation {
+    display: flex;
+    align-items: center;
+
+    .mat-toolbar-row {
+        width: auto;
+    }
+}
+
+.logo img {
+    width: 60px;
+    padding-left: 10px;
+}
+
+.mat-toolbar.mat-primary {
+    background-color: #5258cc;
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 960px) {
+    .mobile {
+        display: flex;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .logo img {
+        padding-left: 0px;
+    }
+
+}

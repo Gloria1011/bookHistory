@@ -3,17 +3,17 @@
 .button-close {
   justify-self: right;
   float: right;
-  top:-24px;
-  right:-24px;
+  top: -24px;
+  right: -24px;
   font-size: 20px;
   border: none;
   height: 30px;
-  background-color: #FFFFFF;
+  background-color: $white-color;
   outline: none;
-  color: $my-color;
-  
+  color: $ocean-blue;
+
   &:hover {
-      cursor: pointer;
+    cursor: pointer;
   }
 }
 
@@ -22,5 +22,78 @@
 }
 
 .mat-form-field {
- width: 200px;
+  width: 230px;
+}
+
+
+.register-book {
+  padding-left: 10px;
+  margin: 2%;
+
+  #mat-dialog-title-0 {
+    font: 400 24px / 32px Roboto, "Helvetica Neue", sans-serif;
+    letter-spacing: normal;
+    font-size: 25px;
+    text-align: right;
+
+    margin: 1em 0;
+    height: 2em;
+    line-height: 2em;
+    color: white;
+    background: #1A2980;
+    background-image: url('https://iloveread.in/library/wp-content/uploads/2017/01/noun_713090_cc-e1484300306678.png');
+    background-size: 75px;
+    background-repeat: no-repeat;
+  }
+
+
+  .mat-dialog-actions {
+    display: flex;
+    justify-content: space-around;
+
+    .mat-button.mat-accent {
+      background-image: $save;
+      padding: 0px 25px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;
+      box-shadow: 0 0 20px #eee;
+      border-radius: 10px;
+      display: block;
+      letter-spacing: 1.3px;
+
+      :hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+      }
+    }
+
+    .mat-button.mat-primary {
+      background-image: $cancel;
+      padding: 0px 22px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;
+      box-shadow: 0 0 20px #eee;
+      border-radius: 10px;
+      display: block;
+      letter-spacing: 1.3px;
+
+      :hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+      }
+
+    }
+  }
+
+
+
+
 }

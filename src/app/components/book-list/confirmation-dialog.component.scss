@@ -1,16 +1,98 @@
 .button-close {
   justify-self: right;
   float: right;
-  top:-24px;
-  right:-24px;
+  top: -24px;
+  right: -24px;
   font-size: 20px;
   border: none;
   height: 30px;
   background-color: #FFFFFF;
   outline: none;
   color: #c04747;
-  
+
   &:hover {
-      cursor: pointer;
+    cursor: pointer;
+  }
+}
+
+.delete-area {
+  display: flex;
+  flex-direction: column;
+
+  .delete-message {
+    display: flex;
+    flex-direction: row;
+    background-color: #9a2629;
+    padding: 0px 10px 0px 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    h1 {
+      font: 400 24px / 32px Roboto, "Helvetica Neue", sans-serif;
+      letter-spacing: normal;
+      font-size: 20px;
+      text-align: right;
+      color: white;
+    }
+
+    .logo-delete {
+      padding: 2px 0px;
+      align-self: center;
+      width: 50px;
+      height: auto;
+      border-radius: 25px;
+    }
+  }
+
+}
+
+
+.mat-dialog-actions {
+
+
+
+
+  display: flex;
+  justify-content: space-around;
+
+  .mat-button.mat-accent {
+    background-image: linear-gradient(to right, #e75e62 0%, #9a2629 1%, #5511e7 100%);
+    padding: 0px 25px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    letter-spacing: 1.3px;
+
+    :hover {
+      background-position: right center;
+      color: #fff;
+      text-decoration: none;
+    }
+  }
+
+  .mat-button.mat-primary {
+    background-image: linear-gradient(to right, #4d4e55 0%, #dbe5e5 51%, #1A2980 100%);
+    padding: 0px 22px;
+    text-align: center;
+    text-transform: uppercase;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;
+    box-shadow: 0 0 20px #eee;
+    border-radius: 10px;
+    display: block;
+    letter-spacing: 1.3px;
+
+    :hover {
+      background-position: right center;
+      color: #fff;
+      text-decoration: none;
+    }
+
   }
 }

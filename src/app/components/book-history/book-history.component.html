@@ -1,40 +1,40 @@
 <ng-container *ngIf="bookHistoryStore.entity$ | async as booksHistory">
-  <div class="mat-elevation-z8">
+  <div class="example-container mat-elevation-z8 history">
     <table mat-table [dataSource]="booksHistory" matSort>  
-    
-      <ng-container matColumnDef="key">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Key</th>
-        <td mat-cell *matCellDef="let row">{{row.key}}</td>
-      </ng-container>
 
+      <ng-container matColumnDef="key">
+        <mat-header-cell *matHeaderCellDef mat-sort-header><i class="fa fa-solid fa-key"></i>Key</mat-header-cell>
+        <mat-cell *matCellDef="let row" data-label="key">{{row.key}}</mat-cell>
+      </ng-container>
+      
       <ng-container matColumnDef="bookId">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Book Id</th>
-        <td mat-cell *matCellDef="let row">{{row.bookId}}</td>
+        <mat-header-cell *matHeaderCellDef mat-sort-header><i class="fa fa-id-card-clip"></i>Book Id</mat-header-cell>
+        <mat-cell *matCellDef="let row" data-label="bookId">{{row.bookId}}</mat-cell>
       </ng-container>
   
       <ng-container matColumnDef="isbn">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>ISBN</th>
-        <td mat-cell *matCellDef="let row">{{row.isbn}}</td>
+        <mat-header-cell *matHeaderCellDef mat-sort-header><i class="fa fa-book"></i>ISBN</mat-header-cell>
+        <mat-cell *matCellDef="let row" data-label="isbn">{{row.isbn}}</mat-cell>
       </ng-container>
   
       <ng-container matColumnDef="timeOfChange">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Time of change</th>
-        <td mat-cell *matCellDef="let row">{{row.timeOfChange}}</td>
+        <mat-header-cell *matHeaderCellDef mat-sort-header><i class="fa fa-business-time"></i>Time of change</mat-header-cell>
+        <mat-cell *matCellDef="let row" data-label="timeOfChange">{{row.timeOfChange}}</mat-cell>
       </ng-container>
   
       <ng-container matColumnDef="change">
-        <th mat-header-cell *matHeaderCellDef mat-sort-header>Change</th>
-        <td mat-cell *matCellDef="let row">{{row.change}}</td>
+        <mat-header-cell *matHeaderCellDef mat-sort-header><i class="fa-sharp fa-solid fa-bolt"></i>Change</mat-header-cell>
+        <mat-cell *matCellDef="let row" data-label="change">{{row.change}}</mat-cell>
       </ng-container>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-
+      <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+      <mat-row *matRowDef="let row; columns: displayedColumns;">
+      </mat-row>
     </table>    
   
     <mat-paginator
       [pageSizeOptions]="[5, 10, 25, 100]"
-      aria-label="Select page of history"
-    ></mat-paginator>
+      aria-label="Select page of history">
+    </mat-paginator>
   </div>
   </ng-container>

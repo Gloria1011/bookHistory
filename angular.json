@@ -115,5 +115,8 @@
       }
     }
   },
-  "defaultProject": "BookHistory"
+  "defaultProject": "BookHistory",
+  "cli": {
+    "analytics": "b0f603bd-491d-4ce9-99bf-6a7f0f8b954b"
+  }
 }
